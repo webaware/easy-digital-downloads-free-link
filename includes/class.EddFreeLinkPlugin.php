@@ -20,10 +20,31 @@ class EddFreeLinkPlugin {
 	}
 
 	/**
-	* hook actions and filters
+	* load options, hook actions and filters
 	*/
 	private function __construct() {
+		$defaults = array (
+			'linkLabel' => __('Download', 'edd-free-link'),
+		);
+
+		$this->options = (array) get_option(EDD_FREE_LINK_OPTIONS);
+
+		if (count(array_diff(array_keys($defaults), array_keys($this->options))) > 0) {
+			// options not yet saved, or new options added; need to update and save
+			$this->options = array_merge($defaults, $this->options);
+			unset($this->options[0]);
+			update_option(EDD_FREE_LINK_OPTIONS, $this->options);
+		}
+
+		add_filter('init', array($this, 'init'));
 		add_filter('edd_purchase_download_form', array($this, 'eddPurchaseDownloadForm'), 20, 2);
+	}
+
+	/**
+	* init action
+	*/
+	public function init() {
+		load_plugin_textdomain('edd-free-link', false, basename(dirname(__FILE__)) . '/languages/');
 	}
 
 	/**
@@ -49,7 +70,7 @@ class EddFreeLinkPlugin {
 
 				if (count($files) == 1 && !empty($files[0]['file'])) {
 					$download_url = $files[0]['file'];
-					$download_label = 'Download';
+					$download_label = apply_filters('edd_free_link_label', $this->options['linkLabel'], $download_id, $args);
 					$download_link_classes = implode(' ', array($args['style'], $args['color'], trim($args['class'])));
 
 					// build download link
