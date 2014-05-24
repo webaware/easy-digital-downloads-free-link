@@ -17,6 +17,8 @@ replace EDD add-to-cart button with download link when product is free
 
 Replace the add-to-cart button in Easy Digital Downloads with a direct link to the download file when the product is free and has only one file. This only works when the file is an external link to a web-accessible file.
 
+On Shopfront theme, the cart icon is replaced with a download icon as well.
+
 == Installation ==
 
 1. Either install automatically through the WordPress admin, or download the .zip file, unzip to a folder, and upload the folder to your /wp-content/plugins/ directory. Read [Installing Plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins) in the WordPress Codex for details.
