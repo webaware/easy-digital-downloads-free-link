@@ -37,7 +37,12 @@ class EddFreeLinkPlugin {
 		}
 
 		add_filter('init', array($this, 'init'));
+
+		// Easy Digital Download hooks
 		add_filter('edd_purchase_download_form', array($this, 'eddPurchaseDownloadForm'), 20, 2);
+
+		// Shopfront theme hooks
+		add_filter('shopfront_purchase_download_form', array($this, 'shopfrontPurchaseLink'), 20, 2);
 	}
 
 	/**
@@ -75,7 +80,8 @@ class EddFreeLinkPlugin {
 
 					// build download link
 					ob_start();
-					$this->loadTemplate('download-link', compact('download_url', 'download_label', 'download_link_classes', 'args'));
+					$template = empty($args['edd_free_link_icon']) ? 'download-link' : 'download-icon';
+					$this->loadTemplate($template, compact('download_url', 'download_label', 'download_link_classes', 'args'));
 					$purchase_form = ob_get_clean();
 				}
 			}
@@ -85,6 +91,17 @@ class EddFreeLinkPlugin {
 		}
 
 		return $purchase_form;
+	}
+
+	/**
+	* intercept Shopfront theme purchase link and maybe replace with download link
+	* @param string $purchase_form
+	* @param array $args
+	* @return string
+	*/
+	public function shopfrontPurchaseLink($purchase_form, $args) {
+		$args['edd_free_link_icon'] = 'icon-product';
+		return $this->eddPurchaseDownloadForm($purchase_form, $args);
 	}
 
 	/**
