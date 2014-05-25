@@ -34,6 +34,14 @@ Because I wanted to add my free plugins to an Easy Digital Downloads shop, witho
 
 No. Downloads are direct from the site hosting the linked file.
 
+= Can I change the download link label? =
+
+Yes, see Settings > EDD Free Link. There's also a filter hook, `edd_free_link_label`, if you want finer control over the link label.
+
+= Can I change the download link HTML? =
+
+Yes, there are templates. Look in the templates folder of the plugin. There's also a filter hook, `edd_free_link_template`, if you want finer control over which template is used.
+
 == Changelog ==
 
 = 1.0.0 [soon...] =
