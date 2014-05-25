@@ -10,10 +10,9 @@ Text Domain: edd-free-link
 Domain Path: /languages/
 */
 
-
 if (!defined('EDD_FREE_LINK_PLUGIN_ROOT')) {
-	define('EDD_FREE_LINK_PLUGIN_ROOT', dirname(__FILE__) . '/');
-	define('EDD_FREE_LINK_PLUGIN_NAME', basename(dirname(__FILE__)) . '/' . basename(__FILE__));
+	define('EDD_FREE_LINK_PLUGIN_ROOT', __DIR__ . '/');
+	define('EDD_FREE_LINK_PLUGIN_NAME', basename(__DIR__) . '/' . basename(__FILE__));
 	define('EDD_FREE_LINK_PLUGIN_FILE', __FILE__);
 	define('EDD_FREE_LINK_PLUGIN_VERSION', '0.0.1');
 
