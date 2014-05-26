@@ -7,7 +7,7 @@ Donate link: http://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Do
 Tags: download, downloads, digital downloads, easy digital downloads
 Requires at least: 3.7
 Tested up to: 3.9.1
-Stable tag: trunk
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ replace EDD add-to-cart button with download link when product is free
 
 Replace the add-to-cart button in Easy Digital Downloads with a direct link to the download file when the product is free and has only one file. This only works when the file is an external link to a web-accessible file.
 
-On Shopfront theme, the cart icon is replaced with a download icon as well.
+For archive pages on the [Shop Front theme](http://wordpress.org/themes/shop-front), the cart icon is replaced with a download icon and direct download link.
 
 == Installation ==
 
@@ -44,5 +44,5 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 
 == Changelog ==
 
-= 1.0.0 [soon...] =
+= 1.0.0 [2014-05-26] =
 * initial public version
