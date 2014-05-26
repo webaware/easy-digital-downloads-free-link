@@ -125,7 +125,7 @@ class EddFreeLinkPlugin {
 				if (count($files) == 1 && !empty($files[0]['file'])) {
 					$download_url = $files[0]['file'];
 					$download_label = empty($this->options['linkLabel']) ? __('Download', 'edd-free-link') : $this->options['linkLabel'];
-					$download_link_classes = implode(' ', array($args['style'], $args['color'], trim($args['class'])));
+					$download_link_classes = implode(' ', array('edd_free_link', $args['style'], $args['color'], trim($args['class'])));
 					$template = empty($args['edd_free_link_icon']) ? 'download-link' : 'download-icon';
 
 					$download_label = apply_filters('edd_free_link_label', $download_label, $download_id, $args);
