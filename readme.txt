@@ -44,6 +44,11 @@ Yes, see Downloads > Settings > Extensions. There's also a filter hook, `edd_fre
 
 Yes, there are templates. Look in the templates folder of the plugin. There's also a filter hook, `edd_free_link_template`, if you want finer control over which template is used.
 
+== Screenshots ==
+
+1. Download button on a free download
+2. Download icon on Shop Front theme home page
+
 == Changelog ==
 
 = 1.0.1 [2014-05-28] =
