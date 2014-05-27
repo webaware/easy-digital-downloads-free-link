@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edd-free-link\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-26 13:52+1000\n"
-"PO-Revision-Date: 2014-05-26 13:52+1000\n"
+"POT-Creation-Date: 2014-05-27 11:39+1000\n"
+"PO-Revision-Date: 2014-05-27 11:39+1000\n"
 "Last-Translator: Ross McKay <rmckay@webaware.com.au>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -22,30 +22,26 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../includes/class.EddFreeLinkPlugin.php:70
+#: ../includes/class.EddFreeLinkPlugin.php:53
 msgid "EDD Free Link"
 msgstr ""
 
-#: ../includes/class.EddFreeLinkPlugin.php:100
+#: ../includes/class.EddFreeLinkPlugin.php:60
+msgid "Download link label"
+msgstr ""
+
+#: ../includes/class.EddFreeLinkPlugin.php:75
 msgid "Get help"
 msgstr ""
 
-#: ../includes/class.EddFreeLinkPlugin.php:101
+#: ../includes/class.EddFreeLinkPlugin.php:76
 msgid "Rating"
 msgstr ""
 
-#: ../includes/class.EddFreeLinkPlugin.php:102
+#: ../includes/class.EddFreeLinkPlugin.php:77
 msgid "Donate"
 msgstr ""
 
-#: ../includes/class.EddFreeLinkPlugin.php:127
+#: ../includes/class.EddFreeLinkPlugin.php:103
 msgid "Download"
-msgstr ""
-
-#: ../views/settings-form.php:9
-msgid "Easy Digital Downloads Free Link settings"
-msgstr ""
-
-#: ../views/settings-form.php:17
-msgid "Download link label"
 msgstr ""

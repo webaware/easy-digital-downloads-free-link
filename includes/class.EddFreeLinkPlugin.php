@@ -20,29 +20,15 @@ class EddFreeLinkPlugin {
 	}
 
 	/**
-	* load options, hook actions and filters
+	* hook actions and filters
 	*/
 	private function __construct() {
-		$defaults = array (
-			'linkLabel' => '',
-		);
-
-		$this->options = (array) get_option(EDD_FREE_LINK_OPTIONS);
-
-		if (count(array_diff(array_keys($defaults), array_keys($this->options))) > 0) {
-			// options not yet saved, or new options added; need to update and save
-			$this->options = array_merge($defaults, $this->options);
-			unset($this->options[0]);
-			update_option(EDD_FREE_LINK_OPTIONS, $this->options);
-		}
-
 		add_filter('init', array($this, 'init'));
-		add_action('admin_init', array($this, 'adminInit'));
-		add_action('admin_menu', array($this, 'adminMenu'));
 		add_filter('plugin_row_meta', array($this, 'addPluginDetailsLinks'), 10, 2);
 
 		// Easy Digital Download hooks
 		add_filter('edd_purchase_download_form', array($this, 'eddPurchaseDownloadForm'), 20, 2);
+		add_filter('edd_settings_extensions', array($this, 'eddSettingsExtensions'));
 
 		// Shopfront theme hooks
 		add_filter('shopfront_purchase_download_form', array($this, 'shopfrontPurchaseLink'), 20, 2);
@@ -52,44 +38,33 @@ class EddFreeLinkPlugin {
 	* init action
 	*/
 	public function init() {
-		load_plugin_textdomain('edd-free-link', false, basename(dirname(__FILE__)) . '/languages/');
+		load_plugin_textdomain('edd-free-link', false, basename(dirname(EDD_FREE_LINK_PLUGIN_FILE)) . '/languages/');
 	}
 
 	/**
-	* register settings in WP admin
-	*/
-	public function adminInit() {
-		add_settings_section(EDD_FREE_LINK_OPTIONS, false, false, EDD_FREE_LINK_OPTIONS);
-		register_setting(EDD_FREE_LINK_OPTIONS, EDD_FREE_LINK_OPTIONS, array($this, 'settingsValidate'));
-	}
-
-	/**
-	* admin menu items
-	*/
-	public function adminMenu() {
-		$title = __('EDD Free Link', 'edd-free-link');
-		add_options_page($title, $title, 'manage_options', 'eddfreelink', array($this, 'settingsPage'));
-	}
-
-	/**
-	* settings admin
-	*/
-	public function settingsPage() {
-		$options = $this->options;
-		require EDD_FREE_LINK_PLUGIN_ROOT . 'views/settings-form.php';
-	}
-
-	/**
-	* validate/sanitise settings on save
-	* @param array $input
+	* settings items
+	* @param array $settings
 	* @return array
 	*/
-	public function settingsValidate($input) {
-		$output = array();
+	public function eddSettingsExtensions($settings) {
+		$our_settings = array(
+			array(
+				'id' => 'edd_free_link_header',
+				'name' => sprintf('<strong>%s</strong>', __('EDD Free Link', 'edd-free-link')),
+				'desc' => '',
+				'type' => 'header',
+				'size' => 'regular'
+			),
+			array(
+				'id' => EDD_FREE_LINK_OPT_LINK_LABEL,
+				'name' => __( 'Download link label', 'edd' ),
+				'desc' => '',
+				'type' => 'text',
+				'size' => 'regular'
+			),
+		);
 
-		$output['linkLabel'] = wp_kses_data(trim($input['linkLabel']));
-
-		return $output;
+		return array_merge($settings, $our_settings);
 	}
 
 	/**
@@ -99,7 +74,7 @@ class EddFreeLinkPlugin {
 		if ($file == DISABLE_EMAILS_PLUGIN_NAME) {
 			$links[] = '<a href="http://wordpress.org/support/plugin/easy-digital-downloads-free-link">' . __('Get help', 'edd-free-link') . '</a>';
 			$links[] = '<a href="http://wordpress.org/plugins/easy-digital-downloads-free-link/">' . __('Rating', 'edd-free-link') . '</a>';
-			$links[] = '<a href="http://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link">' . __('Donate', 'edd-free-link') . '</a>';
+			$links[] = '<a href="http://shop.webaware.com.au/easy-digital-downloads-free-link/">' . __('Donate', 'edd-free-link') . '</a>';
 		}
 
 		return $links;
@@ -112,8 +87,7 @@ class EddFreeLinkPlugin {
 	* @return string
 	*/
 	public function eddPurchaseDownloadForm($purchase_form, $args) {
-
-//~ error_log(__METHOD__ . ": args = \n" . print_r($args,1));
+		global $edd_options;
 
 		$download_id = absint($args['download_id']);
 		if ($download_id) {
@@ -124,7 +98,7 @@ class EddFreeLinkPlugin {
 
 				if (count($files) == 1 && !empty($files[0]['file'])) {
 					$download_url = $files[0]['file'];
-					$download_label = empty($this->options['linkLabel']) ? __('Download', 'edd-free-link') : $this->options['linkLabel'];
+					$download_label = empty($edd_options[EDD_FREE_LINK_OPT_LINK_LABEL]) ? __('Download', 'edd-free-link') : $edd_options[EDD_FREE_LINK_OPT_LINK_LABEL];
 					$download_link_classes = implode(' ', array('edd_free_link', $args['style'], $args['color'], trim($args['class'])));
 					$template = empty($args['edd_free_link_icon']) ? 'download-link' : 'download-icon';
 
