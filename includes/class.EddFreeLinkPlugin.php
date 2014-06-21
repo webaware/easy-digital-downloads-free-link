@@ -71,9 +71,10 @@ class EddFreeLinkPlugin {
 	* action hook for adding plugin details links
 	*/
 	public function addPluginDetailsLinks($links, $file) {
-		if ($file == DISABLE_EMAILS_PLUGIN_NAME) {
+		if ($file == EDD_FREE_LINK_PLUGIN_NAME) {
 			$links[] = '<a href="http://wordpress.org/support/plugin/easy-digital-downloads-free-link">' . __('Get help', 'edd-free-link') . '</a>';
 			$links[] = '<a href="http://wordpress.org/plugins/easy-digital-downloads-free-link/">' . __('Rating', 'edd-free-link') . '</a>';
+			$links[] = '<a href="http://translate.webaware.com.au/projects/edd-free-link">' . _x('Translate', 'translate from English', 'edd-free-link') . '</a>';
 			$links[] = '<a href="http://shop.webaware.com.au/easy-digital-downloads-free-link/">' . __('Donate', 'edd-free-link') . '</a>';
 		}
 

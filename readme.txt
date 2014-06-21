@@ -7,7 +7,7 @@ Donate link: http://shop.webaware.com.au/easy-digital-downloads-free-link/
 Tags: download, downloads, digital downloads, easy digital downloads
 Requires at least: 3.7
 Tested up to: 3.9.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,10 @@ For archive pages on the [Shop Front theme](http://wordpress.org/themes/shop-fro
 
 Want to see it in action? Check out [my shop](http://shop.webaware.com.au/) -- it's running this plugin.
 
+If you'd like to help out by translating this plugin, please sign up for an account and dig in:
+
+* [translate.webaware.com.au/projects/edd-free-link](http://translate.webaware.com.au/projects/edd-free-link)
+
 == Installation ==
 
 1. Either install automatically through the WordPress admin, or download the .zip file, unzip to a folder, and upload the folder to your /wp-content/plugins/ directory. Read [Installing Plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins) in the WordPress Codex for details.
@@ -32,7 +36,7 @@ Want to see it in action? Check out [my shop](http://shop.webaware.com.au/) -- i
 
 Because I wanted to add my free plugins to an Easy Digital Downloads shop, without making it harder to download them from the shop than from WordPress.org plugin pages.
 
-= Are downloads logged in Easy Digital Download? =
+= Are downloads logged in Easy Digital Downloads? =
 
 No. Downloads are direct from the site hosting the linked file.
 
@@ -50,6 +54,10 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 2. Download icon on Shop Front theme home page
 
 == Changelog ==
+
+= 1.0.2 [2014-06-22] =
+* fixed: links in plugins admin page (copypasta error)
+* added: where to sign up for translation contributions
 
 = 1.0.1 [2014-05-28] =
 * change: move settings into EDD settings page > Extensions
