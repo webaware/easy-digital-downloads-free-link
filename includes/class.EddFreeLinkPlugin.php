@@ -135,7 +135,6 @@ class EddFreeLinkPlugin {
 	*/
 	protected function loadTemplate($template, $templateData = array()) {
 		global $posts, $post, $wp_did_header, $wp_query, $wp_rewrite, $wpdb, $wp_version, $wp, $id, $comment, $user_ID;
-		global $woocommerce, $product;
 
 		extract($templateData);
 
