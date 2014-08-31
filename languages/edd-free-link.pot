@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edd-free-link\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-22 08:41+1000\n"
-"PO-Revision-Date: 2014-06-22 08:41+1000\n"
+"POT-Creation-Date: 2014-08-31 18:14+1000\n"
+"PO-Revision-Date: 2014-08-31 18:14+1000\n"
 "Last-Translator: Ross McKay <rmckay@webaware.com.au>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -31,19 +31,22 @@ msgid "Download link label"
 msgstr ""
 
 #: ../includes/class.EddFreeLinkPlugin.php:75
-msgid "Get help"
+msgctxt "plugin details links"
+msgid "Get Help"
 msgstr ""
 
 #: ../includes/class.EddFreeLinkPlugin.php:76
+msgctxt "plugin details links"
 msgid "Rating"
 msgstr ""
 
 #: ../includes/class.EddFreeLinkPlugin.php:77
-msgctxt "translate from English"
+msgctxt "plugin details links"
 msgid "Translate"
 msgstr ""
 
 #: ../includes/class.EddFreeLinkPlugin.php:78
+msgctxt "plugin details links"
 msgid "Donate"
 msgstr ""
 

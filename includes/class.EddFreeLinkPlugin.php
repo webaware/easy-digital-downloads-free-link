@@ -57,7 +57,7 @@ class EddFreeLinkPlugin {
 			),
 			array(
 				'id' => EDD_FREE_LINK_OPT_LINK_LABEL,
-				'name' => __( 'Download link label', 'edd' ),
+				'name' => __('Download link label', 'edd-free-link'),
 				'desc' => '',
 				'type' => 'text',
 				'size' => 'regular'
@@ -72,10 +72,10 @@ class EddFreeLinkPlugin {
 	*/
 	public function addPluginDetailsLinks($links, $file) {
 		if ($file == EDD_FREE_LINK_PLUGIN_NAME) {
-			$links[] = '<a href="http://wordpress.org/support/plugin/easy-digital-downloads-free-link">' . __('Get help', 'edd-free-link') . '</a>';
-			$links[] = '<a href="http://wordpress.org/plugins/easy-digital-downloads-free-link/">' . __('Rating', 'edd-free-link') . '</a>';
-			$links[] = '<a href="http://translate.webaware.com.au/projects/edd-free-link">' . _x('Translate', 'translate from English', 'edd-free-link') . '</a>';
-			$links[] = '<a href="http://shop.webaware.com.au/easy-digital-downloads-free-link/">' . __('Donate', 'edd-free-link') . '</a>';
+			$links[] = sprintf('<a href="http://wordpress.org/support/plugin/easy-digital-downloads-free-link" target="_blank">%s</a>', _x('Get Help', 'plugin details links', 'edd-free-link'));
+			$links[] = sprintf('<a href="http://wordpress.org/plugins/easy-digital-downloads-free-link/" target="_blank">%s</a>', _x('Rating', 'plugin details links', 'edd-free-link'));
+			$links[] = sprintf('<a href="http://translate.webaware.com.au/projects/edd-free-link" target="_blank">%s</a>', _x('Translate', 'plugin details links', 'edd-free-link'));
+			$links[] = sprintf('<a href="http://shop.webaware.com.au/downloads/easy-digital-downloads-free-link/" target="_blank">%s</a>', _x('Donate', 'plugin details links', 'edd-free-link'));
 		}
 
 		return $links;

@@ -3,7 +3,7 @@
 Plugin Name: Easy Digital Downloads Free Link
 Plugin URI: http://shop.webaware.com.au/easy-digital-downloads-free-link/
 Description: replace add-to-cart button with download link when product is free
-Version: 1.0.2
+Version: 1.0.3
 Author: WebAware
 Author URI: http://webaware.com.au/
 Text Domain: edd-free-link

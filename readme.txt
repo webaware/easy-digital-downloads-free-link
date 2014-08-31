@@ -6,8 +6,8 @@ Author URI: http://webaware.com.au/
 Donate link: http://shop.webaware.com.au/easy-digital-downloads-free-link/
 Tags: download, downloads, digital downloads, easy digital downloads
 Requires at least: 3.7
-Tested up to: 3.9.1
-Stable tag: 1.0.2
+Tested up to: 4.0
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,9 +21,14 @@ For archive pages on the [Shop Front theme](http://wordpress.org/themes/shop-fro
 
 Want to see it in action? Check out [my shop](http://shop.webaware.com.au/) -- it's running this plugin.
 
-If you'd like to help out by translating this plugin, please sign up for an account and dig in:
+= Translations =
 
-* [translate.webaware.com.au/projects/edd-free-link](http://translate.webaware.com.au/projects/edd-free-link)
+Many thanks to the generous efforts of our translators:
+
+* Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
+* Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
+
+If you'd like to help out by translating this plugin, please [sign up for an account and dig in](http://translate.webaware.com.au/projects/edd-free-link).
 
 == Installation ==
 
@@ -53,7 +58,15 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 1. Download button on a free download
 2. Download icon on Shop Front theme home page
 
+== Contributions ==
+
+* [Translate into your preferred language](http://translate.webaware.com.au/projects/edd-free-link)
+* [Fork me on GitHub](https://github.com/webaware/easy-digital-downloads-free-link)
+
 == Changelog ==
+
+= 1.0.3 [2014-08/31] =
+* fixed: Norwegian translations (thanks, [neonnero](http://www.neonnero.com/)!)
 
 = 1.0.2 [2014-06-22] =
 * fixed: links in plugins admin page (copypasta error)
