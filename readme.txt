@@ -3,10 +3,10 @@ Contributors: webaware
 Plugin Name: Easy Digital Downloads Free Link
 Plugin URI: http://shop.webaware.com.au/easy-digital-downloads-free-link/
 Author URI: http://webaware.com.au/
-Donate link: http://shop.webaware.com.au/easy-digital-downloads-free-link/
+Donate link: http://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link
 Tags: download, downloads, digital downloads, easy digital downloads
 Requires at least: 3.7
-Tested up to: 4.0
+Tested up to: 4.3
 Stable tag: 1.0.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -65,15 +65,19 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 
 == Changelog ==
 
-= 1.0.3.1 [2014-08/31] =
-* fixed: Norwegian translations (thanks, [neonnero](http://www.neonnero.com/)!)
+= 1.0.3.1, 2014-08/31 =
 
-= 1.0.2 [2014-06-22] =
+* added: Norwegian translations (thanks, [neonnero](http://www.neonnero.com/)!)
+
+= 1.0.2, 2014-06-22 =
+
 * fixed: links in plugins admin page (copypasta error)
 * added: where to sign up for translation contributions
 
-= 1.0.1 [2014-05-28] =
+= 1.0.1, 2014-05-28 =
+
 * change: move settings into EDD settings page > Extensions
 
-= 1.0.0 [2014-05-26] =
+= 1.0.0, 2014-05-26 =
+
 * initial public version
