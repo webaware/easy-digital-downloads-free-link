@@ -69,6 +69,7 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 ### 1.0.4, soon...
 
 * added: Hungarian translation (thanks, [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)!)
+* changed: localisation text domain now easy-digital-downloads-free-link
 
 ### 1.0.3.1, 2014-08/31
 
