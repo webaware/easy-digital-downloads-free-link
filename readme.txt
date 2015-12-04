@@ -25,7 +25,7 @@ Want to see it in action? Check out [my shop](http://shop.webaware.com.au/) -- i
 
 Many thanks to the generous efforts of our translators:
 
-* Hungarian (hu_HU) -- [Tom Vicces](http://www.erdekesseg.hu/)
+* Hungarian (hu_HU) -- [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
 
@@ -68,7 +68,7 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 
 ### 1.0.4, soon...
 
-* added: Hungarian translation (thanks, [Tom Vicces](http://www.erdekesseg.hu/)!)
+* added: Hungarian translation (thanks, [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)!)
 
 ### 1.0.3.1, 2014-08/31
 
