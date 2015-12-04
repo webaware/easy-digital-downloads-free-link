@@ -25,6 +25,7 @@ Want to see it in action? Check out [my shop](http://shop.webaware.com.au/) -- i
 
 Many thanks to the generous efforts of our translators:
 
+* Hungarian (hu_HU) -- [Tom Vicces](http://www.erdekesseg.hu/)
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
 
@@ -65,19 +66,23 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 
 == Changelog ==
 
-= 1.0.3.1, 2014-08/31 =
+### 1.0.4, soon...
+
+* added: Hungarian translation (thanks, [Tom Vicces](http://www.erdekesseg.hu/)!)
+
+### 1.0.3.1, 2014-08/31
 
 * added: Norwegian translations (thanks, [neonnero](http://www.neonnero.com/)!)
 
-= 1.0.2, 2014-06-22 =
+### 1.0.2, 2014-06-22
 
 * fixed: links in plugins admin page (copypasta error)
 * added: where to sign up for translation contributions
 
-= 1.0.1, 2014-05-28 =
+### 1.0.1, 2014-05-28
 
 * change: move settings into EDD settings page > Extensions
 
-= 1.0.0, 2014-05-26 =
+### 1.0.0, 2014-05-26
 
 * initial public version
