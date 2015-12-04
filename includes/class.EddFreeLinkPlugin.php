@@ -42,7 +42,7 @@ class EddFreeLinkPlugin {
 	* init action
 	*/
 	public function init() {
-		load_plugin_textdomain('edd-free-link', false, basename(dirname(EDD_FREE_LINK_PLUGIN_FILE)) . '/languages/');
+		load_plugin_textdomain('easy-digital-downloads-free-link', false, basename(dirname(EDD_FREE_LINK_PLUGIN_FILE)) . '/languages/');
 	}
 
 	/**
@@ -54,14 +54,14 @@ class EddFreeLinkPlugin {
 		$our_settings = array(
 			array(
 				'id' => 'edd_free_link_header',
-				'name' => sprintf('<strong>%s</strong>', __('EDD Free Link', 'edd-free-link')),
+				'name' => sprintf('<strong>%s</strong>', __('EDD Free Link', 'easy-digital-downloads-free-link')),
 				'desc' => '',
 				'type' => 'header',
 				'size' => 'regular'
 			),
 			array(
 				'id' => EDD_FREE_LINK_OPT_LINK_LABEL,
-				'name' => __('Download link label', 'edd-free-link'),
+				'name' => __('Download link label', 'easy-digital-downloads-free-link'),
 				'desc' => '',
 				'type' => 'text',
 				'size' => 'regular'
@@ -76,10 +76,10 @@ class EddFreeLinkPlugin {
 	*/
 	public function addPluginDetailsLinks($links, $file) {
 		if ($file == EDD_FREE_LINK_PLUGIN_NAME) {
-			$links[] = sprintf('<a href="https://wordpress.org/support/plugin/easy-digital-downloads-free-link" target="_blank">%s</a>', _x('Get help', 'plugin details links', 'edd-free-link'));
-			$links[] = sprintf('<a href="https://wordpress.org/plugins/easy-digital-downloads-free-link/" target="_blank">%s</a>', _x('Rating', 'plugin details links', 'edd-free-link'));
-			$links[] = sprintf('<a href="https://translate.webaware.com.au/projects/edd-free-link" target="_blank">%s</a>', _x('Translate', 'plugin details links', 'edd-free-link'));
-			$links[] = sprintf('<a href="http://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link" target="_blank">%s</a>', _x('Donate', 'plugin details links', 'edd-free-link'));
+			$links[] = sprintf('<a href="https://wordpress.org/support/plugin/easy-digital-downloads-free-link" target="_blank">%s</a>', _x('Get help', 'plugin details links', 'easy-digital-downloads-free-link'));
+			$links[] = sprintf('<a href="https://wordpress.org/plugins/easy-digital-downloads-free-link/" target="_blank">%s</a>', _x('Rating', 'plugin details links', 'easy-digital-downloads-free-link'));
+			$links[] = sprintf('<a href="https://translate.webaware.com.au/projects/easy-digital-downloads-free-link" target="_blank">%s</a>', _x('Translate', 'plugin details links', 'easy-digital-downloads-free-link'));
+			$links[] = sprintf('<a href="http://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link" target="_blank">%s</a>', _x('Donate', 'plugin details links', 'easy-digital-downloads-free-link'));
 		}
 
 		return $links;
@@ -103,7 +103,7 @@ class EddFreeLinkPlugin {
 
 				if (count($files) == 1 && !empty($files[0]['file'])) {
 					$download_url = $files[0]['file'];
-					$download_label = empty($edd_options[EDD_FREE_LINK_OPT_LINK_LABEL]) ? __('Download', 'edd-free-link') : $edd_options[EDD_FREE_LINK_OPT_LINK_LABEL];
+					$download_label = empty($edd_options[EDD_FREE_LINK_OPT_LINK_LABEL]) ? __('Download', 'easy-digital-downloads-free-link') : $edd_options[EDD_FREE_LINK_OPT_LINK_LABEL];
 					$download_link_classes = implode(' ', array('edd_free_link', $args['style'], $args['color'], trim($args['class'])));
 					$template = empty($args['edd_free_link_icon']) ? 'download-link' : 'download-icon';
 

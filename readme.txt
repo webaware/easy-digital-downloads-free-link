@@ -6,7 +6,7 @@ Author URI: http://webaware.com.au/
 Donate link: http://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link
 Tags: download, downloads, digital downloads, easy digital downloads
 Requires at least: 3.7
-Tested up to: 4.3
+Tested up to: 4.4
 Stable tag: 1.0.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,7 +29,7 @@ Many thanks to the generous efforts of our translators:
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
 
-If you'd like to help out by translating this plugin, please [sign up for an account and dig in](https://translate.webaware.com.au/projects/edd-free-link).
+If you'd like to help out by translating this plugin, please [sign up for an account and dig in](https://translate.webaware.com.au/projects/easy-digital-downloads-free-link).
 
 == Installation ==
 
@@ -61,7 +61,7 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 
 == Contributions ==
 
-* [Translate into your preferred language](https://translate.webaware.com.au/projects/edd-free-link)
+* [Translate into your preferred language](https://translate.webaware.com.au/projects/easy-digital-downloads-free-link)
 * [Fork me on GitHub](https://github.com/webaware/easy-digital-downloads-free-link)
 
 == Changelog ==

@@ -6,7 +6,7 @@ Description: replace add-to-cart button with download link when product is free
 Version: 1.0.4-dev
 Author: WebAware
 Author URI: http://webaware.com.au/
-Text Domain: edd-free-link
+Text Domain: easy-digital-downloads-free-link
 Domain Path: /languages/
 */
 
