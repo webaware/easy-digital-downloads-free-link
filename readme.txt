@@ -17,7 +17,7 @@ replace EDD add-to-cart button with download link when product is free
 
 Replace the add-to-cart button in Easy Digital Downloads with a direct link to the download file when the product is free and has only one file. This only works when the file is an external link to a web-accessible file.
 
-For archive pages on the [Shop Front theme](http://wordpress.org/themes/shop-front), the cart icon is replaced with a download icon and direct download link.
+For archive pages on the [Shop Front theme](https://wordpress.org/themes/shop-front), the cart icon is replaced with a download icon and direct download link.
 
 Want to see it in action? Check out [my shop](http://shop.webaware.com.au/) -- it's running this plugin.
 
@@ -28,11 +28,11 @@ Many thanks to the generous efforts of our translators:
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
 
-If you'd like to help out by translating this plugin, please [sign up for an account and dig in](http://translate.webaware.com.au/projects/edd-free-link).
+If you'd like to help out by translating this plugin, please [sign up for an account and dig in](https://translate.webaware.com.au/projects/edd-free-link).
 
 == Installation ==
 
-1. Either install automatically through the WordPress admin, or download the .zip file, unzip to a folder, and upload the folder to your /wp-content/plugins/ directory. Read [Installing Plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins) in the WordPress Codex for details.
+1. Either install automatically through the WordPress admin, or download the .zip file, unzip to a folder, and upload the folder to your /wp-content/plugins/ directory. Read [Installing Plugins](https://codex.wordpress.org/Managing_Plugins#Installing_Plugins) in the WordPress Codex for details.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 == Frequently Asked Questions ==
@@ -60,7 +60,7 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 
 == Contributions ==
 
-* [Translate into your preferred language](http://translate.webaware.com.au/projects/edd-free-link)
+* [Translate into your preferred language](https://translate.webaware.com.au/projects/edd-free-link)
 * [Fork me on GitHub](https://github.com/webaware/easy-digital-downloads-free-link)
 
 == Changelog ==
