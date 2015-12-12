@@ -25,6 +25,9 @@ Want to see it in action? Check out [my shop](http://shop.webaware.com.au/) -- i
 
 Many thanks to the generous efforts of our translators:
 
+* Albanian (sq) -- [Besnik](https://profiles.wordpress.org/besnik)
+* Chinese (zh_CN) -- [Jack Lee](http://coolwp.com/)
+* English (en_CA) -- [Christoph Herr](http://www.christophherr.com/)
 * Hungarian (hu_HU) -- [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
@@ -64,12 +67,18 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 * [Translate into your preferred language](https://translate.webaware.com.au/projects/easy-digital-downloads-free-link)
 * [Fork me on GitHub](https://github.com/webaware/easy-digital-downloads-free-link)
 
+== Upgrade Notice ==
+
+= 1.0.4 =
+
+translations are now delivered automatically as language packs when required
+
 == Changelog ==
 
 ### 1.0.4, soon...
 
-* added: Hungarian translation (thanks, [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)!)
-* changed: localisation text domain now easy-digital-downloads-free-link
+* changed: localisation text domain is now easy-digital-downloads-free-link
+* changed: completed translations are no longer in zip file; now delivered automatically as language packs when required
 
 ### 1.0.3.1, 2014-08/31
 
