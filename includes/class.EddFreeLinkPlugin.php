@@ -32,6 +32,7 @@ class EddFreeLinkPlugin {
 
 		// Easy Digital Download hooks
 		add_filter('edd_purchase_download_form', array($this, 'eddPurchaseDownloadForm'), 20, 2);
+		add_filter('edd_settings_sections_extensions', array($this, 'eddSettingsExtensionsSection'));
 		add_filter('edd_settings_extensions', array($this, 'eddSettingsExtensions'));
 
 		// Shopfront theme hooks
@@ -46,12 +47,22 @@ class EddFreeLinkPlugin {
 	}
 
 	/**
+	* settings section
+	*/
+	public function eddSettingsExtensionsSection($sections) {
+		$sections['edd_free_link'] = __('EDD Free Link', 'easy-digital-downloads-free-link');
+
+		return $sections;
+	}
+
+	/**
 	* settings items
 	* @param array $settings
 	* @return array
 	*/
 	public function eddSettingsExtensions($settings) {
 		$our_settings = array(
+
 			array(
 				'id' => 'edd_free_link_header',
 				'name' => sprintf('<strong>%s</strong>', __('EDD Free Link', 'easy-digital-downloads-free-link')),
@@ -59,6 +70,7 @@ class EddFreeLinkPlugin {
 				'type' => 'header',
 				'size' => 'regular'
 			),
+
 			array(
 				'id' => EDD_FREE_LINK_OPT_LINK_LABEL,
 				'name' => __('Download link label', 'easy-digital-downloads-free-link'),
@@ -66,7 +78,13 @@ class EddFreeLinkPlugin {
 				'type' => 'text',
 				'size' => 'regular'
 			),
+
 		);
+
+		// move into custom section on EDD 2.5+
+		if (version_compare(EDD_VERSION, 2.5, '>=')) {
+			$our_settings = array('edd_free_link' => $our_settings);
+		}
 
 		return array_merge($settings, $our_settings);
 	}
