@@ -95,30 +95,48 @@ class EddFreeLinkPlugin {
 		global $edd_options;
 
 		$download_id = absint($args['download_id']);
-		if ($download_id) {
-			$price = floatval(edd_get_lowest_price_option($args['download_id']));
+		if ($download_id && $this->canDownloadFreeSingle($download_id)) {
+			$files = edd_get_download_files($download_id);
+			$file = array_shift($files);
 
-			if ($price < 0.001) {
-				$files = edd_get_download_files($download_id);
+			$download_url          = $file['file'];
+			$download_label        = empty($edd_options[EDD_FREE_LINK_OPT_LINK_LABEL]) ? __('Download', 'easy-digital-downloads-free-link') : $edd_options[EDD_FREE_LINK_OPT_LINK_LABEL];
+			$download_link_classes = implode(' ', array('edd_free_link', $args['style'], $args['color'], trim($args['class'])));
+			$template              = empty($args['edd_free_link_icon']) ? 'download-link' : 'download-icon';
 
-				if (count($files) == 1 && !empty($files[0]['file'])) {
-					$download_url = $files[0]['file'];
-					$download_label = empty($edd_options[EDD_FREE_LINK_OPT_LINK_LABEL]) ? __('Download', 'easy-digital-downloads-free-link') : $edd_options[EDD_FREE_LINK_OPT_LINK_LABEL];
-					$download_link_classes = implode(' ', array('edd_free_link', $args['style'], $args['color'], trim($args['class'])));
-					$template = empty($args['edd_free_link_icon']) ? 'download-link' : 'download-icon';
+			$download_label = apply_filters('edd_free_link_label', $download_label, $download_id, $args);
+			$template       = apply_filters('edd_free_link_template', $template, $download_id, $args);
 
-					$download_label = apply_filters('edd_free_link_label', $download_label, $download_id, $args);
-					$template = apply_filters('edd_free_link_template', $template, $download_id, $args);
-
-					// build download link
-					ob_start();
-					$this->loadTemplate($template, compact('download_url', 'download_label', 'download_link_classes', 'args'));
-					$purchase_form = ob_get_clean();
-				}
-			}
+			// build download link
+			ob_start();
+			$this->loadTemplate($template, compact('download_url', 'download_label', 'download_link_classes', 'args'));
+			$purchase_form = ob_get_clean();
 		}
 
 		return $purchase_form;
+	}
+
+	/**
+	* test for free download possible: lowest price is free, and only one file to download
+	* @param int $download_id
+	* @return bool
+	*/
+	protected function canDownloadFreeSingle($download_id) {
+		$price = floatval(edd_get_lowest_price_option($download_id));
+
+		if ($price >= 0.001) {
+			return false;
+		}
+
+		$files = edd_get_download_files($download_id);
+		if (count($files) > 1) {
+			return false;
+		}
+
+		// get first (only) file; NB: may not be index 0, so pull from front of array
+		$file = array_shift($files);
+
+		return !empty($file['file']);
 	}
 
 	/**
