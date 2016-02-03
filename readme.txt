@@ -4,10 +4,10 @@ Plugin Name: Easy Digital Downloads Free Link
 Plugin URI: http://shop.webaware.com.au/easy-digital-downloads-free-link/
 Author URI: http://webaware.com.au/
 Donate link: http://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link
-Tags: download, downloads, digital downloads, easy digital downloads
+Tags: download, downloads, digital downloads, easy digital downloads, edd
 Requires at least: 3.7
-Tested up to: 4.4
-Stable tag: 1.0.3.1
+Tested up to: 4.4.2
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,11 +15,11 @@ replace EDD add-to-cart button with download link when product is free
 
 == Description ==
 
-Replace the add-to-cart button in Easy Digital Downloads with a direct link to the download file when the product is free and has only one file. This only works when the file is an external link to a web-accessible file.
+Replace the add-to-cart button in [Easy Digital Downloads](https://wordpress.org/plugins/easy-digital-downloads/) with a direct link to the download file when the product is free and has only one file. This only works when the file is an external link to a web-accessible file.
 
 For archive pages on the [Shop Front theme](https://wordpress.org/themes/shop-front), the cart icon is replaced with a download icon and direct download link.
 
-Want to see it in action? Check out [my shop](http://shop.webaware.com.au/) -- it's running this plugin.
+Want to see it in action? Check out the [WebAware shop](http://shop.webaware.com.au/) -- it's running this plugin.
 
 = Translations =
 
@@ -32,7 +32,7 @@ Many thanks to the generous efforts of our translators:
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
 
-If you'd like to help out by translating this plugin, please [sign up for an account and dig in](https://translate.webaware.com.au/projects/easy-digital-downloads-free-link).
+If you'd like to help out by translating this plugin, please [sign up for an account and dig in](https://translate.wordpress.org/projects/wp-plugins/easy-digital-downloads-free-link).
 
 == Installation ==
 
@@ -64,35 +64,23 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 
 == Contributions ==
 
-* [Translate into your preferred language](https://translate.webaware.com.au/projects/easy-digital-downloads-free-link)
+* [Translate into your preferred language](https://translate.wordpress.org/projects/wp-plugins/easy-digital-downloads-free-link)
 * [Fork me on GitHub](https://github.com/webaware/easy-digital-downloads-free-link)
 
 == Upgrade Notice ==
 
 = 1.0.4 =
 
-translations are now delivered automatically as language packs when required
+Fixed downloads not getting Download button; translations are now delivered automatically as language packs when required
 
 == Changelog ==
 
-### 1.0.4, soon...
+The full changelog can be found [on GitHub](https://github.com/webaware/easy-digital-downloads-free-link/blob/master/changelog.md). Recent entries:
 
+### 1.0.4, 2016-02-03
+
+* fixed: some downloads didn't get Download button (when files array not indexed from 0)
+* added: support for `edd_requested_file` filter hook
+* changed: settings are in EDD Free Link subsection of Extensions section
 * changed: localisation text domain is now easy-digital-downloads-free-link
 * changed: completed translations are no longer in zip file; now delivered automatically as language packs when required
-
-### 1.0.3.1, 2014-08/31
-
-* added: Norwegian translations (thanks, [neonnero](http://www.neonnero.com/)!)
-
-### 1.0.2, 2014-06-22
-
-* fixed: links in plugins admin page (copypasta error)
-* added: where to sign up for translation contributions
-
-### 1.0.1, 2014-05-28
-
-* change: move settings into EDD settings page > Extensions
-
-### 1.0.0, 2014-05-26
-
-* initial public version
