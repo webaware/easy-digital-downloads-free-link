@@ -97,13 +97,18 @@ class EddFreeLinkPlugin {
 		$download_id = absint($args['download_id']);
 		if ($download_id && $this->canDownloadFreeSingle($download_id)) {
 			$files = edd_get_download_files($download_id);
-			$file = array_shift($files);
 
-			$download_url          = $file['file'];
+			// get first file only, with its array key
+			$file_keys = array_keys($files);
+			$file_key  = $file_keys[0];
+			$file_data = $files[$file_key];
+
+			$download_url          = $file_data['file'];
 			$download_label        = empty($edd_options[EDD_FREE_LINK_OPT_LINK_LABEL]) ? __('Download', 'easy-digital-downloads-free-link') : $edd_options[EDD_FREE_LINK_OPT_LINK_LABEL];
 			$download_link_classes = implode(' ', array('edd_free_link', $args['style'], $args['color'], trim($args['class'])));
 			$template              = empty($args['edd_free_link_icon']) ? 'download-link' : 'download-icon';
 
+			$download_url   = apply_filters('edd_requested_file', $download_url, $files, $file_key);
 			$download_label = apply_filters('edd_free_link_label', $download_label, $download_id, $args);
 			$template       = apply_filters('edd_free_link_template', $template, $download_id, $args);
 
