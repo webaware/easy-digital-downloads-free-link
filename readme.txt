@@ -26,8 +26,9 @@ Want to see it in action? Check out the [WebAware shop](http://shop.webaware.com
 Many thanks to the generous efforts of our translators:
 
 * Albanian (sq) -- [Besnik](https://profiles.wordpress.org/besnik)
-* Chinese (zh_CN) -- [Jack Lee](http://coolwp.com/)
-* English (en_CA) -- [Christoph Herr](http://www.christophherr.com/)
+* Chinese (zh_CN) -- [the Chinese (simplified) translation team](https://translate.wordpress.org/locale/zh-cn/default/wp-plugins/easy-digital-downloads-free-link)
+* English (en_CA) -- [the English (Canadian) translation team](https://translate.wordpress.org/locale/en-ca/default/wp-plugins/easy-digital-downloads-free-link)
+* French (fr_FR) -- [the French translation team](https://translate.wordpress.org/locale/fr/default/wp-plugins/easy-digital-downloads-free-link)
 * Hungarian (hu_HU) -- [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
