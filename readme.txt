@@ -6,8 +6,8 @@ Author URI: https://shop.webaware.com.au/
 Donate link: https://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link
 Tags: download, downloads, digital downloads, easy digital downloads, edd
 Requires at least: 3.7
-Tested up to: 4.5.2
-Stable tag: 1.0.4
+Tested up to: 4.7
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,18 +70,14 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 
 == Upgrade Notice ==
 
-= 1.0.4 =
+= 1.0.5 =
 
-Fixed downloads not getting Download button; translations are now delivered automatically as language packs when required
+accessibility of download icon on free Shopfront theme and derivatives; tested to WordPress 4.7
 
 == Changelog ==
 
 The full changelog can be found [on GitHub](https://github.com/webaware/easy-digital-downloads-free-link/blob/master/changelog.md). Recent entries:
 
-### 1.0.4, 2016-02-03
+### 1.0.5, 2016-11-18
 
-* fixed: some downloads didn't get Download button (when files array not indexed from 0)
-* added: support for `edd_requested_file` filter hook
-* changed: settings are in EDD Free Link subsection of Extensions section
-* changed: localisation text domain is now easy-digital-downloads-free-link
-* changed: completed translations are no longer in zip file; now delivered automatically as language packs when required
+* fixed: accessibility of download icon on free Shopfront theme and derivatives
