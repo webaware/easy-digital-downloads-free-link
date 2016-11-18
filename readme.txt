@@ -1,15 +1,15 @@
 === Easy Digital Downloads Free Link ===
 Contributors: webaware
 Plugin Name: Easy Digital Downloads Free Link
-Plugin URI: http://shop.webaware.com.au/easy-digital-downloads-free-link/
-Author URI: http://webaware.com.au/
-Donate link: http://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link
+Plugin URI: https://shop.webaware.com.au/easy-digital-downloads-free-link/
+Author URI: https://shop.webaware.com.au/
+Donate link: https://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link
 Tags: download, downloads, digital downloads, easy digital downloads, edd
 Requires at least: 3.7
 Tested up to: 4.5.2
 Stable tag: 1.0.4
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 replace EDD add-to-cart button with download link when product is free
 
@@ -19,7 +19,7 @@ Replace the add-to-cart button in [Easy Digital Downloads](https://wordpress.org
 
 For archive pages on the [Shop Front theme](https://wordpress.org/themes/shop-front), the cart icon is replaced with a download icon and direct download link.
 
-Want to see it in action? Check out the [WebAware shop](http://shop.webaware.com.au/) -- it's running this plugin.
+Want to see it in action? Check out the [WebAware shop](https://shop.webaware.com.au/) -- it's running this plugin.
 
 = Translations =
 

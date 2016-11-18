@@ -97,7 +97,7 @@ class EddFreeLinkPlugin {
 			$links[] = sprintf('<a href="https://wordpress.org/support/plugin/easy-digital-downloads-free-link" target="_blank">%s</a>', _x('Get help', 'plugin details links', 'easy-digital-downloads-free-link'));
 			$links[] = sprintf('<a href="https://wordpress.org/plugins/easy-digital-downloads-free-link/" target="_blank">%s</a>', _x('Rating', 'plugin details links', 'easy-digital-downloads-free-link'));
 			$links[] = sprintf('<a href="https://translate.wordpress.org/projects/wp-plugins/easy-digital-downloads-free-link" target="_blank">%s</a>', _x('Translate', 'plugin details links', 'easy-digital-downloads-free-link'));
-			$links[] = sprintf('<a href="http://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link" target="_blank">%s</a>', _x('Donate', 'plugin details links', 'easy-digital-downloads-free-link'));
+			$links[] = sprintf('<a href="https://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link" target="_blank">%s</a>', _x('Donate', 'plugin details links', 'easy-digital-downloads-free-link'));
 		}
 
 		return $links;
