@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 1.0.5, 2016-11-18
+
+* fixed: accessibility of download icon on free Shopfront theme and derivatives
+
 ### 1.0.4, 2016-02-03
 
 * fixed: some downloads didn't get Download button (when files array not indexed from 0)
