@@ -1,3 +1,5 @@
 .svn
-languages/edd-free-link.mo
+.vscode
+dist
 node_modules
+vendor
