@@ -8,6 +8,6 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<a href="<?php echo esc_url($download_url); ?>" class="<?php echo esc_attr($download_link_classes); ?>">
-	<span class="edd-add-to-cart-label"><?php echo esc_html($download_label); ?></span>
+<a href="<?= esc_url($download_url); ?>" class="<?= esc_attr($download_link_classes); ?>">
+	<span class="edd-add-to-cart-label"><?= esc_html($download_label); ?></span>
 </a>

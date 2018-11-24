@@ -16,7 +16,7 @@ class EddFreeLinkPlugin {
 	public static function getInstance() {
 		static $instance = null;
 
-		if (is_null($instance)) {
+		if ($instance === null) {
 			$instance = new self();
 		}
 
@@ -24,26 +24,24 @@ class EddFreeLinkPlugin {
 	}
 
 	/**
-	* hook actions and filters
+	* hide constructor
 	*/
-	private function __construct() {
-		add_filter('init', array($this, 'init'));
-		add_filter('plugin_row_meta', array($this, 'addPluginDetailsLinks'), 10, 2);
-
-		// Easy Digital Download hooks
-		add_filter('edd_purchase_download_form', array($this, 'eddPurchaseDownloadForm'), 20, 2);
-		add_filter('edd_settings_sections_extensions', array($this, 'eddSettingsExtensionsSection'));
-		add_filter('edd_settings_extensions', array($this, 'eddSettingsExtensions'));
-
-		// Shopfront theme hooks
-		add_filter('shopfront_purchase_download_form', array($this, 'shopfrontPurchaseLink'), 20, 2);
-	}
+	private function __construct() {}
 
 	/**
-	* init action
+	* initialise plugin
 	*/
-	public function init() {
-		load_plugin_textdomain('easy-digital-downloads-free-link', false, basename(dirname(EDD_FREE_LINK_PLUGIN_FILE)) . '/languages/');
+	public function pluginStart() {
+		add_filter('init', 'edd_free_link_load_text_domain');
+		add_filter('plugin_row_meta', [$this, 'addPluginDetailsLinks'], 10, 2);
+
+		// Easy Digital Download hooks
+		add_filter('edd_purchase_download_form', [$this, 'eddPurchaseDownloadForm'], 20, 2);
+		add_filter('edd_settings_sections_extensions', [$this, 'eddSettingsExtensionsSection']);
+		add_filter('edd_settings_extensions', [$this, 'eddSettingsExtensions']);
+
+		// Shopfront theme hooks
+		add_filter('shopfront_purchase_download_form', [$this, 'shopfrontPurchaseLink'], 20, 2);
 	}
 
 	/**
@@ -61,29 +59,29 @@ class EddFreeLinkPlugin {
 	* @return array
 	*/
 	public function eddSettingsExtensions($settings) {
-		$our_settings = array(
+		$our_settings = [
 
-			array(
+			[
 				'id' => 'edd_free_link_header',
 				'name' => sprintf('<strong>%s</strong>', __('EDD Free Link', 'easy-digital-downloads-free-link')),
 				'desc' => '',
 				'type' => 'header',
 				'size' => 'regular'
-			),
+			],
 
-			array(
+			[
 				'id' => EDD_FREE_LINK_OPT_LINK_LABEL,
 				'name' => __('Download link label', 'easy-digital-downloads-free-link'),
 				'desc' => '',
 				'type' => 'text',
 				'size' => 'regular'
-			),
+			],
 
-		);
+		];
 
 		// move into custom section on EDD 2.5+
 		if (version_compare(EDD_VERSION, 2.5, '>=')) {
-			$our_settings = array('edd_free_link' => $our_settings);
+			$our_settings = ['edd_free_link' => $our_settings];
 		}
 
 		return array_merge($settings, $our_settings);
@@ -93,11 +91,11 @@ class EddFreeLinkPlugin {
 	* action hook for adding plugin details links
 	*/
 	public function addPluginDetailsLinks($links, $file) {
-		if ($file == EDD_FREE_LINK_PLUGIN_NAME) {
-			$links[] = sprintf('<a href="https://wordpress.org/support/plugin/easy-digital-downloads-free-link" target="_blank">%s</a>', _x('Get help', 'plugin details links', 'easy-digital-downloads-free-link'));
-			$links[] = sprintf('<a href="https://wordpress.org/plugins/easy-digital-downloads-free-link/" target="_blank">%s</a>', _x('Rating', 'plugin details links', 'easy-digital-downloads-free-link'));
-			$links[] = sprintf('<a href="https://translate.wordpress.org/projects/wp-plugins/easy-digital-downloads-free-link" target="_blank">%s</a>', _x('Translate', 'plugin details links', 'easy-digital-downloads-free-link'));
-			$links[] = sprintf('<a href="https://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link" target="_blank">%s</a>', _x('Donate', 'plugin details links', 'easy-digital-downloads-free-link'));
+		if ($file === EDD_FREE_LINK_PLUGIN_NAME) {
+			$links[] = sprintf('<a href="https://wordpress.org/support/plugin/easy-digital-downloads-free-link" rel="noopener" target="_blank">%s</a>', _x('Get help', 'plugin details links', 'easy-digital-downloads-free-link'));
+			$links[] = sprintf('<a href="https://wordpress.org/plugins/easy-digital-downloads-free-link/" rel="noopener" target="_blank">%s</a>', _x('Rating', 'plugin details links', 'easy-digital-downloads-free-link'));
+			$links[] = sprintf('<a href="https://translate.wordpress.org/projects/wp-plugins/easy-digital-downloads-free-link" rel="noopener" target="_blank">%s</a>', _x('Translate', 'plugin details links', 'easy-digital-downloads-free-link'));
+			$links[] = sprintf('<a href="https://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link" rel="noopener" target="_blank">%s</a>', _x('Donate', 'plugin details links', 'easy-digital-downloads-free-link'));
 		}
 
 		return $links;
@@ -123,7 +121,7 @@ class EddFreeLinkPlugin {
 
 			$download_url          = $file_data['file'];
 			$download_label        = empty($edd_options[EDD_FREE_LINK_OPT_LINK_LABEL]) ? __('Download', 'easy-digital-downloads-free-link') : $edd_options[EDD_FREE_LINK_OPT_LINK_LABEL];
-			$download_link_classes = implode(' ', array('edd_free_link', $args['style'], $args['color'], trim($args['class'])));
+			$download_link_classes = implode(' ', ['edd_free_link', $args['style'], $args['color'], trim($args['class'])]);
 			$template              = empty($args['edd_free_link_icon']) ? 'download-link' : 'download-icon';
 
 			$download_url   = apply_filters('edd_requested_file', $download_url, $files, $file_key);
@@ -178,7 +176,7 @@ class EddFreeLinkPlugin {
 	* @param string $template name of template to load
 	* @param array $templateData data to make available to templates
 	*/
-	protected function loadTemplate($template, $templateData = array()) {
+	protected function loadTemplate($template, $templateData = []) {
 		global $posts, $post, $wp_did_header, $wp_query, $wp_rewrite, $wpdb, $wp_version, $wp, $id, $comment, $user_ID;
 
 		extract($templateData);
