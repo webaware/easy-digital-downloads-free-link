@@ -1,7 +1,7 @@
 {
   "name": "easy-digital-downloads-free-link",
-  "version": "1.0.5",
-  "description": "replace EDD add-to-cart button with download link when product is free",
+  "version": "1.1.0",
+  "description": "Easy Digital Downloads Free Link",
   "main": "Gruntfile.js",
   "devDependencies": {
     "grunt": "^1.0.3",

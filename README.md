@@ -2,7 +2,6 @@
 
 replace EDD add-to-cart button with download link when product is free
 
-* [Home](https://shop.webaware.com.au/easy-digital-downloads-free-link/)
 * [GitHub](https://github.com/webaware/easy-digital-downloads-free-link)
 * [Readme](https://github.com/webaware/easy-digital-downloads-free-link/blob/master/readme.txt)
 * [Changelog](https://github.com/webaware/easy-digital-downloads-free-link/blob/master/changelog.md)

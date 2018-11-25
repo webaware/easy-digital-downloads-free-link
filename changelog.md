@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### 1.1.0, 2018-11-25
+
+* changed: requires minimum PHP version 5.6 (recommend version 7.2 or greater)
+* tested: WordPress 5.0
+
 ### 1.0.5, 2016-11-18
 
 * fixed: accessibility of download icon on free Shopfront theme and derivatives
