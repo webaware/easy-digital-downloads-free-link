@@ -56,5 +56,8 @@
 	</rule>
 
 	<rule ref="Squiz.PHP.CommentedOutCode" />
+	<rule ref="Squiz.PHP.DiscouragedFunctions" />
+	<rule ref="Squiz.PHP.NonExecutableCode" />
+	<rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired" />
 
 </ruleset>
