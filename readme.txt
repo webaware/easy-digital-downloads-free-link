@@ -6,7 +6,7 @@ Author URI: https://shop.webaware.com.au/
 Donate link: https://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link
 Tags: download, downloads, digital downloads, easy digital downloads, edd
 Requires at least: 4.0
-Tested up to: 5.0
+Tested up to: 5.3
 Requires PHP: 5.6
 Stable tag: 1.1.0
 License: GPLv2 or later
