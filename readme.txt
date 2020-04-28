@@ -72,6 +72,10 @@ Yes, there are templates. Look in the templates folder of the plugin. There's al
 
 requires minimum PHP version 5.6 (recommend version 7.2 or greater)
 
+### 1.2.0
+
+A new special hook has been defined for the download link: 'edd_free_link_requested_file'.
+
 ## Changelog
 
 The full changelog can be found [on GitHub](https://github.com/webaware/easy-digital-downloads-free-link/blob/master/changelog.md). Recent entries:
@@ -82,3 +86,10 @@ Released 2018-11-25
 
 * changed: requires minimum PHP version 5.6 (recommend version 7.2 or greater)
 * tested: WordPress 5.0
+
+### 1.2.0
+
+Released 2020-04-28
+
+* A new special hook has been defined for the download link: 'edd_free_link_requested_file'
+* tested: WordPress 5.4

@@ -125,6 +125,10 @@ class EddFreeLinkPlugin {
 			$template              = empty($args['edd_free_link_icon']) ? 'download-link' : 'download-icon';
 
 			$download_url   = apply_filters('edd_requested_file', $download_url, $files, $file_key);
+                        
+                        //Define a special hook for the download url
+                        $download_url   = apply_filters('edd_free_link_requested_file', $download_url, $files, $file_key);
+                        
 			$download_label = apply_filters('edd_free_link_label', $download_label, $download_id, $args);
 			$template       = apply_filters('edd_free_link_template', $template, $download_id, $args);
 
