@@ -6,6 +6,8 @@
 if (!defined('ABSPATH')) {
 	exit;
 }
+
+$download_url = apply_filters('edd_free_download_url', $download_url);
 ?>
 
 <a href="<?= esc_url($download_url); ?>" class="<?= esc_attr($download_link_classes); ?>">
