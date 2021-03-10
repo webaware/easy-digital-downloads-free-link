@@ -6,9 +6,9 @@ Author URI: https://shop.webaware.com.au/
 Donate link: https://shop.webaware.com.au/donations/?donation_for=Easy+Digital+Downloads+Free+Link
 Tags: download, downloads, digital downloads, easy digital downloads, edd
 Requires at least: 4.0
-Tested up to: 5.5
+Tested up to: 5.6.2
 Requires PHP: 5.6
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,3 +82,11 @@ Released 2018-11-25
 
 * changed: requires minimum PHP version 5.6 (recommend version 7.2 or greater)
 * tested: WordPress 5.0
+
+
+### 1.2.0
+
+Released 2021-03-10
+
+* Added hook for free download url: edd_free_download_url
+* Added Persian translate
