@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Digital Downloads Free Link\n"
+"POT-Creation-Date: 2021-03-10 12:27+0330\n"
+"PO-Revision-Date: 2021-03-10 12:28+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: easy-digital-downloads-free-link.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: includes/class.EddFreeLinkPlugin.php:51
+#: includes/class.EddFreeLinkPlugin.php:66
+msgid "EDD Free Link"
+msgstr "لینک دانلود رایگان دانلودها"
+
+#: includes/class.EddFreeLinkPlugin.php:74
+msgid "Download link label"
+msgstr "عنوان لینک دانلود"
+
+#: includes/class.EddFreeLinkPlugin.php:95
+msgctxt "plugin details links"
+msgid "Get help"
+msgstr "دریافت راهنمایی"
+
+#: includes/class.EddFreeLinkPlugin.php:96
+msgctxt "plugin details links"
+msgid "Rating"
+msgstr "امتیازدهی"
+
+#: includes/class.EddFreeLinkPlugin.php:97
+msgctxt "plugin details links"
+msgid "Translate"
+msgstr "ترجمه"
+
+#: includes/class.EddFreeLinkPlugin.php:98
+msgctxt "plugin details links"
+msgid "Donate"
+msgstr "کمک مالی"
+
+#: includes/class.EddFreeLinkPlugin.php:123
+msgid "Download"
+msgstr "بارگیری"
+
+#: views/requires-php.php:10
+#, php-format
+msgid ""
+"Easy Digital Downloads Free Link requires PHP %1$s or higher; your website "
+"has PHP %2$s which is {{a}}old, obsolete, and unsupported{{/a}}."
+msgstr ""
+"لینک دانلود رایگان برای دانلودها نیاز به PHP %1$s یا بالاتر دارد؛ وب سایت "
+"شما دارای PHP %2$s است که {{a}}، منسوخ شده است، و پشتیبانی {{/a}} نمی‌شود."
+
+#: views/requires-php.php:15
+#, php-format
+msgid "Please upgrade your website hosting. At least PHP %s is recommended."
+msgstr "لطفا میزبانی وب سایت خود را ارتقا دهید. حداقل PHP %s توصیه می‌شود."
+
+#. Plugin Name of the plugin/theme
+msgid "Easy Digital Downloads Free Link"
+msgstr "لینک دانلود رایگان برای دانلودها"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/easy-digital-downloads-free-link/"
+msgstr "https://wordpress.org/plugins/easy-digital-downloads-free-link/"
+
+#. Description of the plugin/theme
+msgid "replace add-to-cart button with download link when product is free"
+msgstr ""
+"برای محصولات رایگان دکمه افزودن به سبد خرید را با لینک دانلود جایگزین کنید"
+
+#. Author of the plugin/theme
+msgid "WebAware"
+msgstr "WebAware"
+
+#. Author URI of the plugin/theme
+msgid "https://shop.webaware.com.au/"
+msgstr "https://shop.webaware.com.au/"
